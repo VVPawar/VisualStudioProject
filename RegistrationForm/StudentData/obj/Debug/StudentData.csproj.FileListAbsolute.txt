@@ -1,0 +1,6 @@
+C:\Users\vipul\source\repos\RegistrationForm\StudentData\bin\Debug\StudentData.dll
+C:\Users\vipul\source\repos\RegistrationForm\StudentData\bin\Debug\StudentData.pdb
+C:\Users\vipul\source\repos\RegistrationForm\StudentData\obj\Debug\StudentData.csproj.CoreCompileInputs.cache
+C:\Users\vipul\source\repos\RegistrationForm\StudentData\obj\Debug\StudentData.dll
+C:\Users\vipul\source\repos\RegistrationForm\StudentData\obj\Debug\StudentData.pdb
+C:\Users\vipul\source\repos\RegistrationForm\StudentData\obj\Debug\StudentData.csproj.AssemblyReference.cache

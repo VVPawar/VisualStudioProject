@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insert_Details_Student", "Insert_Details_Student\Insert_Details_Student.csproj", "{0EEE4755-6605-4E5E-811D-1F9F7732BE73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase_Student", "DataBase_Student\DataBase_Student.csproj", "{2755FA43-25DD-499C-94D6-39F52EAA8FE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EEE4755-6605-4E5E-811D-1F9F7732BE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EEE4755-6605-4E5E-811D-1F9F7732BE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EEE4755-6605-4E5E-811D-1F9F7732BE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EEE4755-6605-4E5E-811D-1F9F7732BE73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2755FA43-25DD-499C-94D6-39F52EAA8FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2755FA43-25DD-499C-94D6-39F52EAA8FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2755FA43-25DD-499C-94D6-39F52EAA8FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2755FA43-25DD-499C-94D6-39F52EAA8FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {711ECA44-DEEB-4C2F-99C7-47AA5A6F6C92}
+	EndGlobalSection
+EndGlobal

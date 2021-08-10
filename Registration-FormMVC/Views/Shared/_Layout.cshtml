@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+   
+</head>
+<body class="center main-page">
+    <div class="Page-container">
+    <div class="float-container">
+
+        <header>
+            <div class="float-child child-size-first">
+                <img src="~/image/logo.png" />
+            </div>
+            <div class="float-child child-size">
+                <h4 class="text-1 Header-Page">Loknete Hon. Hanmantrao Patil Charitable Trust's</h4>
+                <h1 class="text-1">Adarsh Public School, Vita</h1>
+                <h4 class="text-1 Header-Page">Email:adarshcbse2009@gmail.com</h4>
+                <h4 class="text-1 Header-Page">Phone No.:+91 7559320702</h4>
+                <h1 class="text-1 Header-Page ">Registration From</h1>
+                <span class="text-2" style="color:black">Note: All '<span style="color:red;">*</span>' marked fields are mandatory. Please mention '<span style="color:red;">NA</span>' if not applicable.</span>
+                <h5>
+                    <span class="text-2" style="font-size:30px; color:red; font-weight:bold;"> &#128073;</span>
+                    <a class="blink_me" style="color:red;text-decoration:none;" href="#"><blink>Proceed for Payment If Application form Already Filled.</blink></a>
+                </h5>
+            </div>
+        </header>
+    </div>
+    </div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

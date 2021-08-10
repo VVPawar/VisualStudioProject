@@ -1,0 +1,437 @@
+﻿@model Registration_FormMVC.Models.Student
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+@section scripts {
+
+    <script type="text/javascript">
+
+        function Display() {
+            var checkBox3 = document.getElementById("AgreeId");
+            if (checkBox3.checked == true) {
+                $('#submitId').show();
+            }
+            else {
+                $('#submitId').hide();
+            }
+        }
+
+        function cop(){
+            var checkBox = document.getElementById("Address_Permanent");
+            if (checkBox.checked == true) {
+                 document.getElementById("addressT").value = document.getElementById("address").value;
+                 document.getElementById("StateT").value = document.getElementById("State").value;
+                 document.getElementById("P_CityT").value = document.getElementById("P_City").value;
+                 document.getElementById("P_pinT").value = document.getElementById("P_pin").value;
+                 document.getElementById("Contry").value = document.getElementById("Nationality").value;
+            }
+            else {
+                 document.getElementById("addressT").value = "";
+                 document.getElementById("StateT").value = "";
+                 document.getElementById("P_CityT").value = "";
+                 document.getElementById("P_pinT").value = "";
+                 document.getElementById("Contry").value = "";
+            }
+        }
+
+        function copy() {
+            var checkBox1 = document.getElementById("SiblingCheckbox");
+            if (checkBox1.checked == true) {
+                $('#SiblingId').show();
+            }
+            else {
+                $('#SiblingId').hide();
+            }
+            return true;
+        }
+
+        $(document).ready(function () {
+            $('#ModerniteFYN').change(function () {
+                if ($('#ModerniteFYN').val() == 'Yes') {
+
+                    $('#ModerniteF').show();
+                    $('#labelMod').show();
+                    $('#labelModY').show();
+                    $('#ModerniteM').show();
+
+                }
+                else {
+                    $('#ModerniteF').hide();
+                    $('#labelMod').hide();
+                    $('#labelModY').hide();
+                    $('#ModerniteM').hide();
+                }
+            });
+            $('#ModerniteMYN').change(function () {
+                if ($('#ModerniteMYN').val() == 'Yes') {
+
+                    $('#LabelModyM').show();
+                    $('#labelModBM').show();
+                    $('#ModerniteMB').show();
+                    $('#ModerniteMF').show();
+
+                }
+                else {
+                    $('#LabelModyM').hide();
+                    $('#labelModBM').hide();
+                    $('#ModerniteMB').hide();
+                    $('#ModerniteMF').hide();
+                }
+            });
+        });
+
+    </script>
+
+}
+
+@using (Html.BeginForm("Subscribe", "Home", FormMethod.Post))
+{
+    <div class="Page-container">
+        <table class="page-container" style="padding-left:20px;padding-right:20px;">
+            <tr>
+                <td class="blue-panel">
+                    <Span style="padding-left:5px;">Sibling Details:</Span>
+                </td>
+            </tr>
+            <tr style="padding-left:5px;height:20px;padding-bottom:50px;">
+                <td style="padding-bottom:20px;padding:0px;margin:0px;">
+                    <span style="padding-left:10px;font-size:12px;">
+                        Sibling (Real Brother/ Sister) only studying in <b>THE MODERN SCHOOL, ECNCR</b>
+                        @Html.CheckBox("isActive", false, new { id = "SiblingCheckbox", onclick = "return copy()" })
+                    </span>
+                    <br />
+                    <table id="SiblingId" style="display:none;">
+                        <tr>
+                            <td width=25%>
+
+                                @Html.Label("Admission No", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Sibling Class", new { @class = "textall" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25%>
+                                <br />
+                                @Html.TextBoxFor(model => model.Admission_No, "", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.Sibling_Class, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25% style="padding-left:100px;">
+                                @Html.Label("Sibling Name", new { @class = "textall" })
+                                <br /><br /><br />
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(model => model.Sibling_Name, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                </td>
+            </tr>
+            <tr style="padding-top:20px;padding-left:20px;"><td class="blue-panel" style="padding-left:5px;">Student Details:</td></tr>
+            <tr style="height:200px;">
+                <td>
+                    <table>
+                        <tr>
+                            <td width=25%>
+                                @Html.Label("Student First Name", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Last Name", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Date of birth", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Student Type", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Mother tongue", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Religion", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Mobile No", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Nationality", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25%>
+
+                                @Html.TextBoxFor(model => model.StudentName, "", new { @class = "textaall" })
+                                @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.L_Name, " ", new { @class = "textaall" })
+                                @Html.ValidationMessageFor(model => model.L_Name, "", new { @class = "text-danger" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.DOB, " ", new { @class = "textaall", Type = "Date" })
+                                @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.StudentType, Model.StudentType, " --Select Student Type--", new { @class = "textaall" })
+                               
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.MotherT, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.Religion, Model.Religion, "--Select Religion--", new { @class = "textaall" })
+                               
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.Mobile, " ", new { @class = "textaall" })
+                                @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.Nationality, Model.Nationality, "--Select Nationality--", new { @class = "textaall" })
+                               
+                                <br /><br /><br />
+
+                            </td>
+                            <td width=25% style="padding:20px;">
+                                @Html.Label("Middle Name", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Gender", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Academic Year", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Class", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Email Id", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Previous School (if any)", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Telephone(Resi)", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Student Photo", new { @class = "textall" })
+                                <br /><br /><br />
+
+                            </td>
+                            <td width=25%>
+                                @Html.TextBoxFor(model => model.MiddleName, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.StudentGender, new SelectList(Enum.GetValues(typeof(Registration_FormMVC.Models.Gender))), " --Select Gender--", new { @class = "textaall" })
+                                
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.AcademicYear, Model.AcademicYear, "--Select Academic Year--", new { @class = "textaall" })
+                                
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.ClassName, Model.ClassName, "--Select Class--", new { @class = "textaall" })
+                               
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.Email, " ", new { @class = "textaall" })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.PreviousSchool, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.Phone, " ", new { @class = "textaall" })
+                               
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.photo, " ", new { @class = "textaall", @type = "file" })
+                                <br /><br /><br />
+                            </td>
+
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td class="blue-panel" style="padding-left:5px;">Permant Address:</td></tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td width=25%>
+                                @Html.Label("Address", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("State", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25%>
+                                @Html.TextAreaFor(model => model.address, new { @class = "textaarae" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.State, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25% style="padding-left:100px;">
+                                @Html.Label("City", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Pin Code", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(model => model.P_City, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.P_pin, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="blue-panel" style="padding-left:5px;">
+                    Communicarion Address:<br />
+                    @Html.CheckBox("isActive", false, new { id = "Address_Permanent", onclick = "return cop()" })Check this box if Communication Address and Permanent Address are the same.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="padding-top:10px;">
+                        <tr>
+                            <td width=25%>
+                                @Html.Label("Address", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("City", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Pin Code", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25% style="padding-top:0px;margin-top:0px;">
+                                @Html.TextAreaFor(model => model.addressT, new { @class = "textaarae" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.P_CityT, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.P_pinT, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25% style="padding-left:100px;">
+                                @Html.Label("Country", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("State", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                            </td>
+                            <td>
+                                @Html.TextBoxFor(model => model.Contry, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.StateT, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td class="blue-panel" style="padding-left:5px;">Father's Details:</td></tr>
+            <tr style="height:200px;">
+                <td>
+                    <table>
+                        <tr>
+                            <td width=25% style="padding:20px;">
+                                @Html.Label("Name", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Qualification", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Office Address", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Telephone(Office)", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Modernite", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Modernite(Year)", new {id="labelModY", @class = "textall", @style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25%>
+                                @Html.TextBoxFor(model => model.Fname, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.QualificationF, new SelectList(Enum.GetValues(typeof(Registration_FormMVC.Models.QualificationF))), " --Select Qualification--", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.OfficeF, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.OfficeTelF, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.ModerniteFYN, new SelectList(Enum.GetValues(typeof(Registration_FormMVC.Models.ModerniteFYN))), "--Select Modernite(Father)--", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.ModerniteF, " ", new { @class = "textaall", @style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25% style="padding:20px;">
+                                @Html.Label("Mobile no", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Email Id", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Occupation", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Father Photo", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Modernite(Branch)", new {id="labelMod", @class = "textall", @style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25%>
+                                @Html.TextBoxFor(model => model.MobileF, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.EmailF, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.StudentGender, new SelectList(Enum.GetValues(typeof(Registration_FormMVC.Models.Gender))), " --Select Gender--", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.PhotoF, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.ModerniteM, " ", new { @class = "textaall", @style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr><td class="blue-panel" style="padding-left:5px;">Mother's Details:</td></tr>
+            <tr style="height:200px;">
+                <td>
+                    <table>
+                        <tr>
+                            <td width=25% style="padding:20px;">
+                                @Html.Label("Name", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Qualification", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Office Address", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Telephone(Office)", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Modernite", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Modernite(Year)", new {id="LabelModyM", @class = "textall",@style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25%>
+                                @Html.TextBoxFor(model => model.Fname, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.StudentGender, new SelectList(Enum.GetValues(typeof(Registration_FormMVC.Models.Gender))), " --Select Gender--", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.OfficeF, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.OfficeTelF, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.ModerniteMYN, new SelectList(Enum.GetValues(typeof(Registration_FormMVC.Models.ModerniteMYN))), "--Select Modernite(Mother)--", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.ModerniteMF, " ", new { @class = "textaall", @style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25% style="padding:20px;">
+                                @Html.Label("Mobile no", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Email Id", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Occupation", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                <br /><br /><br />
+                                @Html.Label("Mother Photo", new { @class = "textall" })
+                                <br /><br /><br />
+                                @Html.Label("Modernite(Branch)", new {id="labelModBM", @class = "textall",@style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                            <td width=25%>
+                                @Html.TextBoxFor(model => model.MobileM, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.EmailM, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.DropDownListFor(model => model.OccupationM, new SelectList(Enum.GetValues(typeof(Registration_FormMVC.Models.Gender))), "--Select Occupation--", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.PhotoM, " ", new { @class = "textaall" })
+                                <br /><br /><br />
+                                @Html.TextBoxFor(model => model.ModerniteMB, " ", new { @class = "textaall", @style = "Display:none;" })
+                                <br /><br /><br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;height:25px;">
+                    @Html.CheckBox("isActive", false, new { id = "AgreeId", onclick = "return Display()" }) @Html.Label("I Agree", new { @class = "textall" })<br /><br />
+                    <button type="submit" id="submitId" value="Submit" style="display:none;width:90px;height:40px;background-color:#2e3094;color:#ffffff;">Submit</button><br /><br /><br /><br />
+                </td>
+            </tr>
+        </table>
+    </div>
+}

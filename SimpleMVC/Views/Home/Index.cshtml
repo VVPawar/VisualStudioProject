@@ -1,0 +1,136 @@
+﻿@model SimpleMVC.Models.Student
+@{
+    ViewBag.Title = "Home Page";
+
+}
+
+
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+@using (Html.BeginForm("Subscribe", "Home", FormMethod.Post))
+{
+    <!--Page Language="C#" Inherits="System.Web.Mvc.ViewPage<SimpleMVC.Models.Student>" -->
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Registration From</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="~/Content/Style.css" rel="stylesheet" />
+
+
+        <script src="~/Scripts/js/JavaScript.js"></script>
+    </head>
+    <body class="center main-page">
+        
+            <table class="page-container" style="padding-left:20px;padding-right:20px;">
+
+                <tr style="padding-top:20px;padding-left:20px;"><td class="blue-panel" style="padding-left:5px;">Student Details:</td></tr>
+                <tr style="height:200px;">
+                    <td>
+                        <table>
+                            <tr>
+                                <td width=25%>
+                                    @Html.Label("Student First Name", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Last Name", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Date of birth", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Student Type", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Mother tongue", new { @class = "textall" })
+                                    <br /><br /><br />
+                                    @Html.Label("Religion", new { @class = "textall" })
+                                    <br /><br /><br />
+                                    @Html.Label("Mobile No", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Nationality", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                </td>
+                                <td width=25%>
+
+                                    @Html.TextBoxFor(model => model.StudentName, "", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.StudentName, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.L_Name, " ", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.L_Name, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.DOB, " ", new { @class = "textaall", Type = "Date" })
+                                    @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.DropDownListFor(model => model.StudentType, Model.StudentType, " --Select Student Type--", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.StudentType, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.MotherT, " ", new { @class = "textaall" })
+                                    <br /><br /><br />
+                                    @Html.DropDownListFor(model => model.Religion, Model.Religion, "--Select Religion--", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.Religion, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.Mobile, " ", new { @class = "textaall" })
+                                    <br /><br /><br />
+                                    @Html.DropDownListFor(model => model.Nationality, Model.Nationality, "--Select Nationality--", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.Nationality, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+
+                                </td>
+                                <td width=25% style="padding:20px;">
+                                    @Html.Label("Middle Name", new { @class = "textall" })
+                                    <br /><br /><br />
+                                    @Html.Label("Gender", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Academic Year", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Class", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Email Id", new { @class = "textall" })@Html.Label("*", new { @class = "RedText" })
+                                    <br /><br /><br />
+                                    @Html.Label("Previous School (if any)", new { @class = "textall" })
+                                    <br /><br /><br />
+                                    @Html.Label("Telephone(Resi)", new { @class = "textall" })
+                                    <br /><br /><br />
+                                    @Html.Label("Student Photo", new { @class = "textall" })
+                                    <br /><br /><br />
+
+                                </td>
+                                <td width=25%>
+                                    @Html.TextBoxFor(model => model.MiddleName, " ", new { @class = "textaall" })
+                                    <br /><br /><br />
+                                    @Html.DropDownListFor(model=>model.StudentGender, new SelectList(Enum.GetValues(typeof(SimpleMVC.Models.Gender))), " --Select Gender--", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.StudentGender, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.DropDownListFor(model => model.AcademicYear, Model.AcademicYear, "--Select Academic Year--", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.AcademicYear, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.DropDownListFor(model => model.ClassName, Model.ClassName, "--Select Class--", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.ClassName, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.Email, " ", new { @class = "textaall" })
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.PreviousSchool, " ", new { @class = "textaall" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.Phone, " ", new { @class = "textaall" })
+                                    <br /><br /><br />
+                                    @Html.TextBoxFor(model => model.photo, " ", new { @class = "textaall", @type = "file" })
+                                    <br /><br /><br />
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="text-align:center;height:25px;">
+                        @Html.CheckBox("isActive", false, new { id = "AgreeId" }) @Html.Label("I Agree", new { @class = "textall" })<br /><br />
+
+                        <button class="Sub" type="submit" id="submitId" value="Submit" onclick="return myFunction(this.from)">Submit</button><br /><br /><br /><br />
+                    </td>
+                </tr>
+            </table>
+        
+    </body>
+</html>
+}

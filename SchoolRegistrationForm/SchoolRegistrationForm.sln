@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolRegistrationForm", "SchoolRegistrationForm\SchoolRegistrationForm.csproj", "{66673033-51A2-4CD5-A7F0-FC6FCA8ADCAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseConn", "DataBaseConn\DataBaseConn.csproj", "{45152C7A-1682-44F4-AF20-27B34350DAA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66673033-51A2-4CD5-A7F0-FC6FCA8ADCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66673033-51A2-4CD5-A7F0-FC6FCA8ADCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66673033-51A2-4CD5-A7F0-FC6FCA8ADCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66673033-51A2-4CD5-A7F0-FC6FCA8ADCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45152C7A-1682-44F4-AF20-27B34350DAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45152C7A-1682-44F4-AF20-27B34350DAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45152C7A-1682-44F4-AF20-27B34350DAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45152C7A-1682-44F4-AF20-27B34350DAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62F98DA8-F046-4E98-B875-AD89E28D1754}
+	EndGlobalSection
+EndGlobal

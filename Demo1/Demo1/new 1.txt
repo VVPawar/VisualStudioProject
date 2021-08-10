@@ -1,0 +1,5 @@
+https://www.tutorialsteacher.com/mvc/html-helpers
+
+
+https://docs.microsoft.com/en-us/ef/
+https://www.entityframeworktutorial.net/what-is-entityframework.aspx

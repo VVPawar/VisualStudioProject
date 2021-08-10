@@ -1,0 +1,10 @@
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\bin\SchoolRegistrationForm.dll.config
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\bin\SchoolRegistrationForm.dll
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\bin\SchoolRegistrationForm.pdb
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\obj\Debug\SchoolRegistrationForm.csproj.AssemblyReference.cache
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\obj\Debug\SchoolRegistrationForm.csproj.CoreCompileInputs.cache
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\obj\Debug\SchoolRegistrationForm.dll
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\obj\Debug\SchoolRegistrationForm.pdb
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\bin\DataBaseConn.dll
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\bin\DataBaseConn.pdb
+C:\Users\vipul\source\repos\SchoolRegistrationForm\SchoolRegistrationForm\obj\Debug\SchoolRegistrationForm.csproj.CopyComplete

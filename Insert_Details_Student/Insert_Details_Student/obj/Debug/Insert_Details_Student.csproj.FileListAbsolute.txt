@@ -1,0 +1,10 @@
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\bin\Insert_Details_Student.dll.config
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\bin\Insert_Details_Student.dll
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\bin\Insert_Details_Student.pdb
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\bin\DataBase_Student.dll
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\bin\DataBase_Student.pdb
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\obj\Debug\Insert_Details_Student.csproj.AssemblyReference.cache
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\obj\Debug\Insert_Details_Student.csproj.CoreCompileInputs.cache
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\obj\Debug\Insert_Details_Student.csproj.CopyComplete
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\obj\Debug\Insert_Details_Student.dll
+C:\Users\vipul\source\repos\Insert_Details_Student\Insert_Details_Student\obj\Debug\Insert_Details_Student.pdb

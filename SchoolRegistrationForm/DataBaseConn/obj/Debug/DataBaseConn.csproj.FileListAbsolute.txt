@@ -1,0 +1,6 @@
+C:\Users\vipul\source\repos\SchoolRegistrationForm\DataBaseConn\bin\Debug\DataBaseConn.dll
+C:\Users\vipul\source\repos\SchoolRegistrationForm\DataBaseConn\bin\Debug\DataBaseConn.pdb
+C:\Users\vipul\source\repos\SchoolRegistrationForm\DataBaseConn\obj\Debug\DataBaseConn.csproj.AssemblyReference.cache
+C:\Users\vipul\source\repos\SchoolRegistrationForm\DataBaseConn\obj\Debug\DataBaseConn.csproj.CoreCompileInputs.cache
+C:\Users\vipul\source\repos\SchoolRegistrationForm\DataBaseConn\obj\Debug\DataBaseConn.dll
+C:\Users\vipul\source\repos\SchoolRegistrationForm\DataBaseConn\obj\Debug\DataBaseConn.pdb

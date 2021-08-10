@@ -1,0 +1,5 @@
+C:\Users\vipul\source\repos\RegistrationForm\DataSetStudent\obj\Debug\net5.0\DataSetStudent.csproj.AssemblyReference.cache
+C:\Users\vipul\source\repos\RegistrationForm\DataSetStudent\obj\Debug\net5.0\DataSetStudent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vipul\source\repos\RegistrationForm\DataSetStudent\obj\Debug\net5.0\DataSetStudent.AssemblyInfoInputs.cache
+C:\Users\vipul\source\repos\RegistrationForm\DataSetStudent\obj\Debug\net5.0\DataSetStudent.AssemblyInfo.cs
+C:\Users\vipul\source\repos\RegistrationForm\DataSetStudent\obj\Debug\net5.0\DataSetStudent.csproj.CoreCompileInputs.cache

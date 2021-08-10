@@ -1,0 +1,5 @@
+C:\Users\vipul\source\repos\Insert_Details_Student\DataBase_Student\bin\Debug\DataBase_Student.dll
+C:\Users\vipul\source\repos\Insert_Details_Student\DataBase_Student\bin\Debug\DataBase_Student.pdb
+C:\Users\vipul\source\repos\Insert_Details_Student\DataBase_Student\obj\Debug\DataBase_Student.csproj.CoreCompileInputs.cache
+C:\Users\vipul\source\repos\Insert_Details_Student\DataBase_Student\obj\Debug\DataBase_Student.dll
+C:\Users\vipul\source\repos\Insert_Details_Student\DataBase_Student\obj\Debug\DataBase_Student.pdb

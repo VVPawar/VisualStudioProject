@@ -1,0 +1,12 @@
+C:\Users\vipul\source\repos\Demo1\Demo1\bin\Demo1.dll.config
+C:\Users\vipul\source\repos\Demo1\Demo1\bin\Demo1.dll
+C:\Users\vipul\source\repos\Demo1\Demo1\bin\Demo1.pdb
+C:\Users\vipul\source\repos\Demo1\Demo1\bin\DataBaseConnection.dll
+C:\Users\vipul\source\repos\Demo1\Demo1\bin\DataBaseConnection.pdb
+C:\Users\vipul\source\repos\Demo1\Demo1\obj\Debug\Demo1.csproj.AssemblyReference.cache
+C:\Users\vipul\source\repos\Demo1\Demo1\obj\Debug\Demo1.csproj.CoreCompileInputs.cache
+C:\Users\vipul\source\repos\Demo1\Demo1\obj\Debug\Demo1.csproj.CopyComplete
+C:\Users\vipul\source\repos\Demo1\Demo1\obj\Debug\Demo1.dll
+C:\Users\vipul\source\repos\Demo1\Demo1\obj\Debug\Demo1.pdb
+C:\Users\vipul\source\repos\Demo1\Demo1\bin\StudentD.dll
+C:\Users\vipul\source\repos\Demo1\Demo1\bin\StudentD.pdb
